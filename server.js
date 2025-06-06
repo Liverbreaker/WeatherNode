@@ -12,8 +12,8 @@ async function getWeather(){
 	weather = await res.json();
 };
 
-
 let weather;
+process.env.TZ = 'Asia/Taipei';
 const fetch_URL = process.env.FetchURL ;
 const port = process.env.PORT || 4000;
 
@@ -33,4 +33,5 @@ app.get('/getinfo', (req, resp) =>{
 
 app.listen(port,()=> {
 	console.log(`Server is running on port ${port}`);
+	console.log(new Date().toString());
 });

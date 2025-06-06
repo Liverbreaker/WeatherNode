@@ -9,24 +9,24 @@ const updateRegularly = (schedule, fetch_URL, weather)=>{
 	// Schedule a job at 5:30 AM
 	schedule.scheduleJob('30 5 * * *', function() {
 	    console.log('Executing task at 5:30 AM');
-	    updateData();
+	    updateData(fetch_URL, weather);
 	});
 
 	// Schedule a job at 11:30 AM
 	schedule.scheduleJob('30 11 * * *', function() {
 	    console.log('Executing task at 11:30 AM');
-	    updateData();
+	    updateData(fetch_URL, weather);
 	});
 
 	// Schedule a job at 5:30 PM
 	schedule.scheduleJob('30 17 * * *', function() {
 	    console.log('Executing task at 5:30 PM');
-	    updateData();
+	    updateData(fetch_URL, weather);
 	});
 	// Schedule a job at 11:30 PM
 	schedule.scheduleJob('30 23 * * *', function() {
 	    console.log('Executing task at 11:30 PM');
-	    updateData();
+	    updateData(fetch_URL, weather);
 	});
 };
 
